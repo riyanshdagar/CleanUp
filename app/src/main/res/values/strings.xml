@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">CleanUp</string>
+    <string-array name="None">
+
+        <item>Choose your option</item>
+        <item>Room Cleaning</item>
+        <item>Plumbing</item>
+        <item>Electrical</item>
+        <item>Civil</item>
+        <item>Networking</item>
+
+
+    </string-array>
+
+
+    //Headings
+    <string name="heading_one">"Setting up the Password" Step 1</string>
+    <string name="heading_two">Step 2</string>
+    <string name="heading_three">Step 3</string>
+    <string name="heading_fourth">Step 4</string>
+
+    //Description
+    <string name="desc_one">Open your Google account and click on "Manage your Google Account".</string>
+    <string name="desc_two">Go to the "Security" section present on your left panel. Then enable "2 step verification". After this, click on "App Passwords".</string>
+    <string name="desc_three">Choose "other" from "Select app panel" and give "CleanUp" as the "custom name". Then tap on "Generate".</string>
+    <string name="desc_fourth">Copy this newly generated password and save it. This will be required every time while using CleanUp.</string>
+
+
+</resources>
