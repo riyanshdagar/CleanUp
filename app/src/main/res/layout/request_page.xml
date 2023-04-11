@@ -193,7 +193,23 @@
         android:shadowColor="@color/black"
         android:text="Submit"
         android:onClick="buttonSendEmail"
-        android:textSize="30dp"
+        android:textSize="15dp"
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+    <Button
+        android:id="@+id/track_complaints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:elevation="50dp"
+        android:shadowColor="@color/black"
+        android:text="Track your complaints"
+        android:onClick="buttonSendEmail"
+        android:textSize="15dp"
         android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
 
 </LinearLayout>

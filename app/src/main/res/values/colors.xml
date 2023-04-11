@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="cleanup">#2962FF</color>
     <color name="bhai">#2979FF</color>
+    <color name="red">#FF0000</color>
     <color name="cleanupbutton">#2979FF
     </color>
 </resources>

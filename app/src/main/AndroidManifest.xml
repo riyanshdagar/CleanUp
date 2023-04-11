@@ -12,6 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CleanUp">
         <activity
+            android:name=".UpdateActivity"
+            android:parentActivityName=".TrackComplaint"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".TrackComplaint"
+            android:exported="false"
+            android:parentActivityName=".Requestpage">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Requestpage"
             android:exported="false" />
         <activity

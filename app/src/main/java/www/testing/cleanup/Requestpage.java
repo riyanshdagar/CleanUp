@@ -26,10 +26,27 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class Requestpage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    Button track_complaints;
+    EditText hn,rn;
+    Spinner problem;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.request_page);
+
+        hn = findViewById(R.id.hn);
+        rn = findViewById(R.id.rn);
+        problem = findViewById(R.id.spinner11);
+
+        track_complaints = (Button) findViewById(R.id.track_complaints);
+        track_complaints.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openTrackComplaintActivity();
+            }
+        });
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner11);
 // Create an ArrayAdapter using the string array and a default spinner layout
@@ -45,6 +62,11 @@ public class Requestpage extends AppCompatActivity implements AdapterView.OnItem
 
     }
 
+    public void openTrackComplaintActivity(){
+        Intent intent = new Intent(this, TrackComplaint.class);
+        startActivity(intent);
+    }
+
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String choice = adapterView.getItemAtPosition(i).toString();
@@ -57,6 +79,11 @@ public class Requestpage extends AppCompatActivity implements AdapterView.OnItem
     }
 
     public void buttonSendEmail (View view){
+
+        MyDatabseHelper myDB = new MyDatabseHelper(Requestpage.this);
+        myDB.addBook(problem.getSelectedItem().toString().trim(),
+                hn.getText().toString().trim(),
+                Integer.valueOf(rn.getText().toString().trim()));
 
         try {
             EditText stringSenderEmail = (EditText) findViewById(R.id.el);
